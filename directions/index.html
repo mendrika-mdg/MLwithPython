@@ -1,69 +1,232 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="fr">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="..">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
-    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
-    <meta name="description" content="Conference Template">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="KeyWords" content="Conference">
-    <title>Directions | Conference Template</title>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css">
+    <meta name="description" content="Préparer son ordinateur pour l’atelier Python et machine learning : installation d’Anaconda et premiers pas avec Jupyter.">
+    <title>Informations pratiques | Atelier Python et Machine Learning</title>
+
+    <style>
+        .installation li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .installation pre {
+            padding: 18px;
+            overflow-x: auto;
+            background: #f3f5f8;
+            border: 1px solid #dce1e8;
+            border-radius: 6px;
+            line-height: 1.6;
+        }
+
+        .installation code {
+            font-family: Consolas, Monaco, monospace;
+        }
+
+        .installation .download-link {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 8px 0;
+            background: #242080;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .installation .download-link:hover {
+            background: #3732a6;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="banner">
-        <img src="assets/banner.jpg" alt="Conference Template Banner">
+        <img src="assets/banner.jpg" alt="Atelier Python et Machine Learning">
         <div class="top-left">
-            <span class="title1">Conference</span><span class="title2">Template</span> <span class="year">2525</span>
+            <span class="title1">Atelier ML avec Python</span>
         </div>
         <div class="bottom-right">
-            June 31, 2525 <br> University Name, and City Maybe
+            Du 12 au 16 octobre 2026<br>
+            ENS Ampefiloha, Antananarivo
         </div>
     </div>
 
-    <table class="navigation">
-        <tr>
-            <td class="navigation">
-                <a title="Conference Home Page" href=".">Home</a>
-            </td>
-            <td class="navigation">
-                <a title="Register for the Conference" href="registration">Registration</a>
-            </td>
-            <td class="navigation">
-                <a title="Conference Program" href="program">Program</a> 
-            </td>
-            <td class="navigation">
-                <a class="current" title="Directions to the Conference" href="directions">Directions</a>
-            </td>
-            <td class="navigation">
-                <a title="Conference Flyer" href="flyer">Flyer</a>
-            </td>
-        </tr>
-    </table>
+    <nav aria-label="Navigation principale">
+        <table class="navigation">
+            <tr>
+                <td class="navigation">
+                    <a href=".">Accueil</a>
+                </td>
+                <td class="navigation">
+                    <a href="program">Programme</a>
+                </td>
+                <td class="navigation">
+                    <a class="current" aria-current="page" href="directions">
+                        Informations pratiques
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </nav>
 
+    <main class="installation">
+        <h2>Préparer son ordinateur</h2>
 
-    <h2>Directions</h2>
-    <p>
-        Here&rsquo;s where you can put directions to the conference,
-        and other information that will help attendees find the location,
-        and find the building, and register, and find local places they can stay, etc.
-        You can embed a <a href="https://www.google.com/maps">Google Maps</a> iframe
-        with directions to the conference like a did below.
-        It can also be helpful to include maps of the campus itself,
-        or pictures of the building the conference will be held in.
-        I&rsquo;ve opted to use a placeholder image of a kitten below.
-    </p>
+        <p>
+            Pour les exercices, nous utiliserons <strong>Python</strong> dans
+            des notebooks <strong>Jupyter</strong>. Anaconda Distribution
+            permet d’installer ces outils sur votre ordinateur.
+        </p>
 
-    <iframe class="directions" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d134998.56138929052!2d-121.98776790326531!3d37.869213445646146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808ff431db2f96d1%3A0x8b99d90a20aa67de!2sMt+Diablo!5e0!3m2!1sen!2sus!4v1561787340910!5m2!1sen!2sus"></iframe>
+        <p>
+            Merci de réaliser l’installation avant le début de l’atelier,
+            si possible, et d’apporter votre ordinateur portable
+            ainsi que son chargeur.
+        </p>
 
-    <img class="center" src="assets/kitten4.jpg" alt="This is just a kitten right now" id="kitten">
+        <h2>1. Télécharger Anaconda</h2>
+
+        <p>
+            Rendez-vous sur le site officiel et choisissez
+            <strong>Anaconda Distribution</strong>, puis le programme
+            d’installation correspondant à votre ordinateur :
+            Windows, macOS ou Linux.
+        </p>
+
+        <p>
+            <a class="download-link"
+               href="https://www.anaconda.com/download"
+               target="_blank"
+               rel="noopener noreferrer">
+                Télécharger Anaconda Distribution
+            </a>
+        </p>
+
+        <p>
+            Prévoyez une connexion Internet pour le téléchargement
+            et l’installation.
+        </p>
+
+        <h2>2. Installer Anaconda</h2>
+
+        <ol>
+            <li>
+                Ouvrez le programme d’installation téléchargé.
+                Sous Linux, suivez les instructions du guide officiel.
+            </li>
+            <li>
+                Suivez les étapes affichées et conservez les options
+                recommandées par le programme d’installation.
+            </li>
+            <li>
+                Attendez la fin de l’installation avant de fermer la fenêtre.
+            </li>
+        </ol>
+
+        <p>
+            Les instructions détaillées pour chaque système sont disponibles
+            dans le
+            <a href="https://www.anaconda.com/docs/getting-started/installation"
+               target="_blank"
+               rel="noopener noreferrer">
+                guide officiel d’installation
+            </a>.
+        </p>
+
+        <h2>3. Ouvrir Jupyter Notebook</h2>
+
+        <p>
+            Si Anaconda Navigator est disponible sur votre ordinateur,
+            ouvrez-le puis lancez <strong>Jupyter Notebook</strong>.
+            Vous pouvez également démarrer Jupyter avec la méthode suivante :
+        </p>
+
+        <ol>
+            <li>
+                Sous Windows, ouvrez <strong>Anaconda Prompt</strong>
+                depuis le menu Démarrer.
+                Sous macOS ou Linux, ouvrez un terminal configuré
+                lors de l’installation d’Anaconda.
+            </li>
+            <li>
+                Saisissez la commande ci-dessous, puis appuyez sur Entrée.
+            </li>
+        </ol>
+
+        <pre><code>jupyter notebook</code></pre>
+
+        <p>
+            Jupyter s’ouvre dans votre navigateur.
+            Le notebook s’exécute sur votre ordinateur :
+            une connexion Internet n’est pas nécessaire pour effectuer
+            les exercices locaux une fois les outils installés.
+        </p>
+
+        <h2>4. Exécuter un premier programme</h2>
+
+        <ol>
+            <li>
+                Dans Jupyter, créez un nouveau notebook et sélectionnez
+                le noyau <strong>Python 3</strong>.
+            </li>
+            <li>
+                Copiez le code suivant dans la première cellule.
+            </li>
+            <li>
+                Appuyez sur <strong>Maj + Entrée</strong>
+                pour exécuter la cellule.
+            </li>
+        </ol>
+
+        <pre><code>print("Bonjour !")
+print(2 + 3)</code></pre>
+
+        <p>Le résultat attendu est :</p>
+
+        <pre><code>Bonjour !
+5</code></pre>
+
+        <h2>5. Vérifier les bibliothèques de l’atelier</h2>
+
+        <p>
+            Dans une nouvelle cellule, exécutez le code suivant.
+            Vous apprendrez à utiliser ces bibliothèques pendant l’atelier.
+        </p>
+
+        <pre><code>import numpy
+import pandas
+import matplotlib
+import sklearn
+
+print("Les bibliothèques sont disponibles.")</code></pre>
+
+        <p>
+            Si le message s’affiche sans erreur, les bibliothèques nécessaires
+            sont disponibles dans votre notebook.
+        </p>
+
+        <h2>En cas de difficulté</h2>
+
+        <p>
+            Si une étape ne fonctionne pas, faites une capture d’écran
+            du message d’erreur et précisez votre système :
+            Windows, macOS ou Linux.
+            Envoyez ces informations à
+            <a href="mailto:mmmhr@leeds.ac.uk">mmmhr@leeds.ac.uk</a>.
+        </p>
+    </main>
 
     <footer>
-        &copy; Conference Organizers
-        &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
+        &copy; 2026 Science sans Frontières
+        &nbsp;|&nbsp; Modèle conçu par
+        <a href="https://github.com/mikepierce">Mike Pierce</a>
     </footer>
 
 </body>
