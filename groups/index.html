@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="..">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css?v=2">
+    <meta name="description" content="Groupes de participants à l’atelier Python et machine learning.">
+    <title>Groupes | Atelier Python et Machine Learning</title>
+
+    <style>
+        .groupes {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .groupe-card {
+            min-width: 0;
+            padding: 24px;
+            background: white;
+            border: 1px solid #dce1e8;
+            border-radius: 8px;
+        }
+
+        .groupe-card h3 {
+            margin: 0 0 16px;
+            color: #242080;
+        }
+
+        .groupe-card ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .groupe-card li {
+            margin: 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #edf0f4;
+            overflow-wrap: anywhere;
+        }
+
+        .groupe-card li:last-child {
+            border-bottom: 0;
+        }
+
+        .groupe-card.attente {
+            background: #fff8e8;
+        }
+
+        @media (max-width: 600px) {
+            .groupes {
+                grid-template-columns: 1fr;
+            }
+
+            .groupe-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/banner-python.png" alt="Python et réseau neuronal sur fond sombre">
+        <div class="top-left">
+            <span class="title1">Atelier ML avec Python</span>
+        </div>
+        <div class="bottom-right">
+            Du 12 au 16 octobre 2026<br>
+            ENS Ampefiloha, Antananarivo
+        </div>
+    </div>
+
+    <nav aria-label="Navigation principale">
+        <table class="navigation">
+            <tr>
+                <td class="navigation">
+                    <a href=".">Accueil</a>
+                </td>
+                <td class="navigation">
+                    <a href="program">Programme</a>
+                </td>
+                <td class="navigation">
+                    <a href="directions">Informations pratiques</a>
+                </td>
+                <td class="navigation">
+                    <a class="current" aria-current="page" href="groups">
+                        Groupes
+                    </a>
+                </td>
+                <td class="navigation">
+                    <a href="resources">Ressources</a>
+                </td>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <h2>Groupes</h2>
+
+        <div class="groupes">
+            <section class="groupe-card" aria-labelledby="groupe-1">
+                <h3 id="groupe-1">Groupe 1</h3>
+                <ul>
+                    <li>RAKOTOMALALA Onisoa Laurence</li>
+                    <li>MANOELANTSOA Anjara Nampoina</li>
+                    <li>RAKOTONJANAHARY Todisoa Benjamin</li>
+                    <li>RAMANANARIBAKO Vatsiniaina Dieudate</li>
+                    <li>Andriamahefa Fanantenana Alpha</li>
+                </ul>
+            </section>
+
+            <section class="groupe-card" aria-labelledby="groupe-2">
+                <h3 id="groupe-2">Groupe 2</h3>
+                <ul>
+                    <li>RAHARISOA Bruno</li>
+                    <li>ANTSOFITIAVANA Giscard Farnaïse Elian</li>
+                    <li>RASOAMIARAMANANA Tiavina Nirina</li>
+                    <li>RAKOTOARISON Herinirainy Fenosoa</li>
+                    <li>RAKOTOARIMANANA Tsialonina Ny Aina</li>
+                </ul>
+            </section>
+
+            <section class="groupe-card" aria-labelledby="groupe-3">
+                <h3 id="groupe-3">Groupe 3</h3>
+                <ul>
+                    <li>Razakavololona Ando</li>
+                    <li>ZAMORA Jean Aur'Elinho</li>
+                    <li>Ramaminiaina Florica Ormilla Rothschild</li>
+                    <li>AUGUSTE HARINAMBININA Mitsinjosoa</li>
+                    <li>ALI MANSOURI Soilihi</li>
+                </ul>
+            </section>
+
+            <section class="groupe-card" aria-labelledby="groupe-4">
+                <h3 id="groupe-4">Groupe 4</h3>
+                <ul>
+                    <li>RALAIZAFY Princia Besson</li>
+                    <li>ANDRIANIRINA Idealisoa Christino</li>
+                    <li>SEHENOARIVELO Ranjasoa</li>
+                    <li>ANDRIAMITSANTA Ny Antso Liantsoa</li>
+                    <li>Rakotoniaina Mirandy Tianasoa</li>
+                </ul>
+            </section>
+
+            <section class="groupe-card attente" aria-labelledby="groupe-5">
+                <h3 id="groupe-5">Groupe 5 — Liste d’attente</h3>
+                <ul>
+                    <li>RAMIANDRISOA David René</li>
+                    <li>ANDRIATINARIVO Hervé Elysé</li>
+                    <li>Ralambozafy Harivola</li>
+                    <li>ANDRIAMAMY Rova Isaia</li>
+                    <li>Diary ratsimbazafy Diary</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Science sans Frontières
+        &nbsp;|&nbsp; Modèle conçu par
+        <a href="https://github.com/mikepierce">Mike Pierce</a>
+    </footer>
+
+</body>
+</html>
