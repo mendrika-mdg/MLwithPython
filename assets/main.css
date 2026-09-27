@@ -1,129 +1,527 @@
-/* main.css */
+@import url("https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab&display=swap");
 
-/* These are the colors and fonts used throughout the webpage.
- * I've listed them here so that a user may easily
- * do a search-and-replace for these to change the site theme.
- *   'Roboto',sans-serif; Font for the title text
- *   'Roboto-Slab',serif; Font for the body text 
- *   #fafafa; Background color of the site
- *   #505050; Foreground (text) color of the site
- *   #52739e; Navy, "Template" in the logo, current page in navigation, special titles in the Program
- *   #b2132e; Reddish, "Conference" in the logo, hover color for links
- *   #813c54; Heading color, titles in the Program
- *   #b8860b; Dark Goldenrod, color for links
- */
-
-@import url('https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab');
-
-*{
-    border:0;
-    font:inherit;
-    font-size:1em;
-    margin:0;
-    padding:0;
-    vertical-align:baseline;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-body{
-    background-color: #fafafa;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #505050; 
-    text-align:left;
-    font-family:'Roboto',sans-serif;
-    font-size:1em;
-    line-height:1.5em;
-    margin: 60px auto;
-    width: 1000px;
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
 }
 
-a{color: #b8860b; text-decoration:none;}
-a.current{color: #52739e;}
-a.current:hover{color: #e82945;}
-a:hover{color: #b2132e;}
-a:active{color: #e82945;}
-h1,h2,h3,h4{clear:left; color: #813c54; margin:1.5em 0em 1em 0em; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
-h1{font-size:2.67em;}
-h2{font-size:2.00em;}
-h3{font-size:1.67em;}
-h4{font-size:1.33em;}
-p{list-style:none; margin:24px auto 24px auto; padding:0px; width:900px; text-align:left;}
-li a, p a {text-decoration:underline; text-decoration-color:#b8860b;}
-ul{list-style:none; margin:24px auto 24px auto; padding:0px; width:800px; text-align:left;}
-ul li{list-style:none; margin:0px auto 0px auto; padding:0px; text-align:left;}
-i,em{font-style:italic;}
-b,strong{font-weight:bold;}
-sup{
+body {
+    width: calc(100% - 32px);
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fafafa;
+    color: #505050;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #9a7000;
+    text-decoration: none;
+}
+
+a.current {
+    color: #52739e;
+}
+
+a:hover,
+a.current:hover,
+a:active {
+    color: #b2132e;
+}
+
+a:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #52739e;
+    outline-offset: 4px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #813c54;
+    margin: 1.5em 0 0.75em;
+    font-family: "Roboto Slab", serif;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.67rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.67rem);
+}
+
+h4 {
+    font-size: 1.15rem;
+}
+
+p {
+    width: 100%;
+    max-width: 900px;
+    margin: 24px auto;
+}
+
+ul,
+ol {
+    width: 100%;
+    max-width: 900px;
+    margin: 24px auto;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+li a,
+p a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+sup,
+sub {
+    font-size: 0.8em;
+    line-height: 0;
+}
+
+sup {
     vertical-align: super;
-    font-size: 0.8em;
-    line-height: 0;
 }
-sub{
+
+sub {
     vertical-align: sub;
-    font-size: 0.8em;
-    line-height: 0;
 }
-table{
-    width: 1000px;
-    margin: 12px auto 24px auto;
-    float: center;
-    /* UNCOMMENT THIS FOR DEBUGGING THE ALIGNMENT */
-    /*border: 1px solid black;*/
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 16px;
+    background: #f3f5f8;
+    border: 1px solid #dce1e8;
+    border-radius: 6px;
+    white-space: pre;
 }
-th,td{
+
+code {
+    font-family: Consolas, Monaco, monospace;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin: 12px auto 24px;
+    border-collapse: collapse;
+}
+
+th,
+td {
     text-align: left;
-    /* UNCOMMENT THIS FOR DEBUGGING THE ALIGNMENT */
-    /*border: 1px solid black;*/
+    vertical-align: top;
 }
 
-/* Website Banner */
-.banner {position: relative; font-family:'Roboto Slab',serif;}
-.top-left {font-size:5.33em; color: #505050; background: #fafafa; text-align: center; width: 1000px; height: 67px; position: absolute; padding: 36px 0 0 0; top: 0px;}
-.bottom-right {font-size:2.33em; color: #fafafa; line-height: 1.5em; width: auto; height: 100px; padding: 0px 27px 27px 0px; text-align: right; position: absolute; bottom: 0px; right: 0px; text-shadow: 0px 0px 6px #000000;}
-
-/* Conference Title Logo */
-.title1{color: #b2132e; text-shadow: 1px 1px 3px #c0c0c0;} 
-.title2{color: #52739e; text-shadow: 1px 1px 3px #c0c0c0;}
-.year{color: #505050; font-size:0.67em; font-weight: lighter;}
-
-/* Navigation Links (Home, Registration, etc) */
-table.navigation{width:800px;}
-td.navigation{font-size:1.67em; white-space:nowrap; width:20%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
-
-/* Sponsor Images */
-table.sponsors{width:800px;}
-td.sponsor{white-space:nowrap; width:33%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
-td.sponsor img{width: 100%}
-
-/* The Table on the Program Page */
-td.room{padding: 4px 12px 4px 4px; width: 90%; vertical-align:bottom; font-size:1.67em; color: #52739e; height:32px;}
-td.date{white-space:nowrap; width:130px; text-align:right; vertical-align:top; padding:4px 16px 0px 0px;}
-td.title{padding: 4px 12px 4px 4px; width: 90%; vertical-align:top; font-size:1.5em; color: #813c54; height:32px; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0; }
-td.title-special{padding: 4px 12px 4px 4px; width: 90%; vertical-align:top; font-size:1.67em; color: #52739e; height:32px; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
-td.speaker{padding: 4px 12px 4px 4px; font-style: italic; font-size:1em; max-height:999999px}
-td.abstract{padding: 4px 12px 12px 4px; font-size:1em; max-height:999999px}
-td.abstract img{display: block; margin: 4px auto 8px auto}
-table.plenary{padding-top: 8px; background: #ffffff;}
-
-/* Registration and Directions iframes and Images */
-iframe.registration{display:block; margin:1em auto 2em auto; width:700px; height:1400px; border:none;}
-iframe.directions{display:block; margin:1em auto 2em auto; width:800px; height:400px; border:none;}
-img.center{display:block; width:67%; margin:1em auto 2em auto;}
-
-/* Flyer Images */
-table.flyers{width:800px;}
-td.flyer{white-space:nowrap; width:50%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
-td.sponsor img{width: 100%}
-
-footer{font-size:0.875em; margin-top:12em; text-align:center;}
-
-/* My hacky way of making the site mobile-friendly */
-@media only screen and (max-width: 1100px) {
-    h2{font-size:3.00em;}
-    p{font-size:1.5em; line-height:1.5em;}
-    th,td,tr{font-size:1.5em; line-height:1.5em;}
-    td.date{font-size:1em; padding-top:0.5em;}
-    td.navigation{font-size:1.5em; padding:0px 20px 0px 20px;}
-    table.footer{font-size:0.33em;}
+.banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 5 / 2;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #031225;
+    font-family: "Roboto Slab", serif;
 }
 
+.banner > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .top-left {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    left: auto;
+    width: 46%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: white;
+    font-size: clamp(1.25rem, 3.5vw, 2.375rem);
+    line-height: 1.2;
+    text-align: right;
+}
+
+.banner .title1,
+.banner .title2 {
+    color: white;
+    background: transparent;
+    font-size: inherit;
+    text-shadow: none;
+}
+
+.banner .year {
+    color: white;
+    font-size: 0.75em;
+    font-weight: 400;
+}
+
+.banner .bottom-right {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    left: auto;
+    width: 46%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: transparent;
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    line-height: 1.5;
+    text-align: right;
+}
+
+table.navigation {
+    display: block;
+    width: 100%;
+    margin: 16px auto 28px;
+}
+
+table.navigation tbody {
+    display: block;
+    width: 100%;
+}
+
+table.navigation tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 12px;
+}
+
+td.navigation {
+    display: block;
+    width: auto;
+    padding: 0;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    text-align: center;
+    white-space: normal;
+}
+
+td.navigation a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 8px 12px;
+}
+
+table.sponsors,
+table.flyers {
+    width: 100%;
+    max-width: 800px;
+}
+
+td.sponsor,
+td.flyer {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+td.sponsor {
+    width: 33.333%;
+}
+
+td.flyer {
+    width: 50%;
+}
+
+td.sponsor img,
+td.flyer img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+td.room,
+td.title,
+td.title-special {
+    padding: 8px 12px;
+    height: auto;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    line-height: 1.4;
+}
+
+td.room,
+td.title-special {
+    color: #52739e;
+}
+
+td.title {
+    color: #813c54;
+}
+
+td.title,
+td.title-special {
+    font-family: "Roboto Slab", serif;
+}
+
+td.date {
+    width: 130px;
+    padding: 8px 16px 8px 0;
+    text-align: right;
+    white-space: nowrap;
+}
+
+td.speaker {
+    padding: 4px 12px;
+    font-style: italic;
+}
+
+td.abstract {
+    padding: 4px 12px 16px;
+}
+
+td.abstract img {
+    display: block;
+    margin: 8px auto;
+}
+
+table.plenary {
+    background: white;
+}
+
+.programme-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 24px 0;
+}
+
+.programme-container table.programme {
+    width: 100%;
+    min-width: 1100px;
+    max-width: none;
+    margin: 0;
+    table-layout: fixed;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.programme th,
+.programme td {
+    padding: 16px 12px;
+    border: 1px solid #d5dbe3;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.programme thead th {
+    background: #242080;
+    color: white;
+    font-weight: 700;
+}
+
+.programme .heure {
+    width: 110px;
+    white-space: nowrap;
+}
+
+.programme tbody th {
+    background: #f3f4f7;
+    color: #222;
+    font-weight: 400;
+}
+
+.programme .cours {
+    background: #e1efd9;
+}
+
+.programme .application {
+    background: #e5f3fc;
+}
+
+.programme .groupe {
+    background: #d8f1ec;
+}
+
+.programme .pause {
+    background: #fff3c4;
+    font-weight: 700;
+}
+
+.programme .divers {
+    background: #fce3cd;
+}
+
+.programme-legende {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    max-width: none;
+    margin: 16px 0 32px;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9375rem;
+}
+
+.programme-legende li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.programme-legende .couleur {
+    display: inline-block;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d5dbe3;
+    border-radius: 3px;
+}
+
+iframe {
+    display: block;
+    max-width: 100%;
+    border: 0;
+}
+
+iframe.registration {
+    width: 100%;
+    max-width: 700px;
+    height: 1400px;
+    margin: 1em auto 2em;
+}
+
+iframe.directions {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 1em auto 2em;
+}
+
+img.center {
+    display: block;
+    width: 67%;
+    margin: 1em auto 2em;
+}
+
+footer {
+    margin-top: 64px;
+    padding: 16px 0;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 16px auto;
+    }
+
+    .banner {
+        aspect-ratio: auto;
+    }
+
+    .banner > img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5 / 2;
+        object-fit: cover;
+    }
+
+    .banner .top-left {
+        position: static;
+        width: 100%;
+        padding: 16px 16px 8px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .banner .bottom-right {
+        position: static;
+        width: 100%;
+        padding: 0 16px 20px;
+        font-size: 0.9375rem;
+        text-align: center;
+    }
+
+    table.navigation tr {
+        gap: 4px;
+    }
+
+    td.navigation {
+        flex: 1 1 140px;
+    }
+
+    table.sponsors,
+    table.sponsors tbody,
+    table.sponsors tr,
+    table.flyers,
+    table.flyers tbody,
+    table.flyers tr {
+        display: block;
+        width: 100%;
+    }
+
+    td.sponsor,
+    td.flyer {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    td.date {
+        width: auto;
+        padding-right: 8px;
+        font-size: 0.875rem;
+    }
+
+    iframe.directions {
+        height: 300px;
+    }
+
+    img.center {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 40px;
+    }
+}
