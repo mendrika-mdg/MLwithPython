@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="..">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css">
+    <meta name="description" content="Programme de l’atelier Python et machine learning pour la recherche scientifique, du 12 au 16 octobre 2026 à l’ENS Ampefiloha.">
+    <title>Programme | Atelier Python et Machine Learning</title>
+
+    <style>
+        .programme-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+        }
+
+        table.programme {
+            width: 100%;
+            min-width: 1100px;
+            margin: 0;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .programme th,
+        .programme td {
+            padding: 16px 12px;
+            border: 1px solid #d5dbe3;
+            text-align: center;
+            vertical-align: middle;
+            overflow-wrap: break-word;
+        }
+
+        .programme thead th {
+            background: #242080;
+            color: white;
+            font-weight: bold;
+        }
+
+        .programme .heure {
+            width: 110px;
+            white-space: nowrap;
+        }
+
+        .programme tbody th {
+            background: #f3f4f7;
+            color: #222;
+            font-weight: normal;
+        }
+
+        .programme .cours {
+            background: #e1efd9;
+        }
+
+        .programme .application {
+            background: #e5f3fc;
+        }
+
+        .programme .groupe {
+            background: #d8f1ec;
+        }
+
+        .programme .pause {
+            background: #fff3c4;
+            font-weight: bold;
+        }
+
+        .programme .divers {
+            background: #fce3cd;
+        }
+
+        .programme-legende {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            margin: 16px 0 32px;
+            padding: 0;
+            list-style: none;
+            font-size: 15px;
+        }
+
+        .programme-legende li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .programme-legende .couleur {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #d5dbe3;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/banner.jpg" alt="Atelier Python et Machine Learning">
+        <div class="top-left">
+            <span class="title1">Atelier ML avec Python</span>
+        </div>
+        <div class="bottom-right">
+            Du 12 au 16 octobre 2026<br>
+            ENS Ampefiloha, Antananarivo
+        </div>
+    </div>
+
+    <nav aria-label="Navigation principale">
+        <table class="navigation">
+            <tr>
+                <td class="navigation">
+                    <a href=".">Accueil</a>
+                </td>
+                <td class="navigation">
+                    <a class="current" aria-current="page" href="program">Programme</a>
+                </td>
+                <td class="navigation">
+                    <a href="directions">Informations pratiques</a>
+                </td>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <h2>Programme de l’atelier</h2>
+
+        <p>
+            Du lundi 12 au vendredi 16 octobre 2026, de 09h00 à 17h00,
+            à l’ENS Ampefiloha, Antananarivo.
+        </p>
+
+        <div class="programme-container"
+             role="region"
+             aria-label="Emploi du temps de la semaine"
+             tabindex="0">
+
+            <table class="programme">
+                <thead>
+                    <tr>
+                        <th scope="col" class="heure">Heure</th>
+                        <th scope="col">Lundi 12 oct.</th>
+                        <th scope="col">Mardi 13 oct.</th>
+                        <th scope="col">Mercredi 14 oct.</th>
+                        <th scope="col">Jeudi 15 oct.</th>
+                        <th scope="col">Vendredi 16 oct.</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row" class="heure">09:00–09:30</th>
+                        <td class="divers">Accueil et présentation de l’atelier</td>
+                        <td class="groupe">Rappel des notions du lundi (G1)</td>
+                        <td class="groupe">Rappel des notions du mardi (G2)</td>
+                        <td class="groupe">Rappel des notions du mercredi (G3)</td>
+                        <td class="groupe">Rappel des notions du jeudi (G4)</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="heure">09:30–10:30</th>
+                        <td class="cours">
+                            Découvrir Python et les notebooks Jupyter ;
+                            comprendre comment exécuter une cellule
+                        </td>
+                        <td class="cours">Listes, conditions et boucles</td>
+                        <td class="cours">Classes, objets, attributs et méthodes</td>
+                        <td class="cours">
+                            Introduction au machine learning :
+                            données, cible, entraînement et test
+                        </td>
+                        <td class="cours">Introduction à la classification</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="heure">10:30–11:30</th>
+                        <td class="application">Exercice d’application</td>
+                        <td class="application">Exercice d’application</td>
+                        <td class="application">Exercice d’application</td>
+                        <td class="application">Exercice d’application</td>
+                        <td class="application">
+                            Entraîner et évaluer un modèle de classification
+                            avec scikit-learn
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="heure">11:30–13:30</th>
+                        <td class="pause">Pause déjeuner</td>
+                        <td class="divers">
+                            <strong>
+                                Atelier CV, lettre de motivation
+                                et bourses à l’étranger
+                            </strong>
+                        </td>
+                        <td class="pause">Pause déjeuner</td>
+                        <td class="divers">
+                            <strong>Conférence World Space Week</strong>
+                        </td>
+                        <td class="pause">Pause déjeuner</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="heure">13:30–14:30</th>
+                        <td class="cours">
+                            Variables, nombres et chaînes de caractères
+                        </td>
+                        <td class="cours">
+                            Fonctions : paramètres, valeurs retournées et appels
+                        </td>
+                        <td class="cours">
+                            Introduction à NumPy, pandas et Matplotlib
+                        </td>
+                        <td class="cours">
+                            Entraîner et évaluer un modèle de régression
+                            avec scikit-learn
+                        </td>
+                        <td class="groupe">Travail en groupe</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="heure">14:30–15:30</th>
+                        <td class="application">Exercice d’application</td>
+                        <td class="application">Exercice d’application</td>
+                        <td class="application">Exercice d’application</td>
+                        <td class="application">Exercice d’application</td>
+                        <td class="groupe">Présentations des groupes</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="heure">15:30–17:00</th>
+                        <td class="groupe">Travail en groupe</td>
+                        <td class="groupe">Travail en groupe</td>
+                        <td class="groupe">Travail en groupe</td>
+                        <td class="groupe">Travail en groupe</td>
+                        <td class="divers">
+                            <strong>Remise des certificats et goûter</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <ul class="programme-legende" aria-label="Légende">
+            <li>
+                <span class="couleur" style="background: #e1efd9;" aria-hidden="true"></span>
+                Cours magistral
+            </li>
+            <li>
+                <span class="couleur" style="background: #e5f3fc;" aria-hidden="true"></span>
+                Exercice d’application
+            </li>
+            <li>
+                <span class="couleur" style="background: #d8f1ec;" aria-hidden="true"></span>
+                Travail en groupe
+            </li>
+            <li>
+                <span class="couleur" style="background: #fff3c4;" aria-hidden="true"></span>
+                Pause
+            </li>
+            <li>
+                <span class="couleur" style="background: #fce3cd;" aria-hidden="true"></span>
+                Divers
+            </li>
+        </ul>
+
+        <p>
+            G1, G2, G3 et G4 désignent les quatre groupes de participants.
+        </p>
+    </main>
+
+    <footer>
+        &copy; 2026 Science sans Frontières
+        &nbsp;|&nbsp; Modèle conçu par
+        <a href="https://github.com/mikepierce">Mike Pierce</a>
+    </footer>
+
+</body>
+</html>
