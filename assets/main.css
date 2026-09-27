@@ -525,3 +525,22 @@ footer {
         margin-top: 40px;
     }
 }
+
+.partenaires-frame {
+    padding: 20px;
+    background: white;
+    border: 1px solid #dce1e8;
+    border-radius: 10px;
+}
+
+.partenaires-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .partenaires-frame {
+        padding: 8px;
+    }
+}
