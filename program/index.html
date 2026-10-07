@@ -165,37 +165,64 @@
                 <tbody>
                     <tr>
                         <th scope="row" class="heure">09:00–09:30</th>
-                        <td class="divers">Accueil et présentation de l’atelier</td>
-                        <td class="groupe">Rappel des notions du lundi (G1)</td>
-                        <td class="groupe">Rappel des notions du mardi (G2)</td>
-                        <td class="groupe">Rappel des notions du mercredi (G3)</td>
-                        <td class="groupe">Rappel des notions du jeudi (G4)</td>
+                        <td class="divers">
+                            Accueil, présentation de l’atelier et environnement Jupyter
+                        </td>
+                        <td class="groupe">Rappel et mini-défi du lundi (G1)</td>
+                        <td class="groupe">Rappel et mini-défi du mardi (G2)</td>
+                        <td class="groupe">Rappel et mini-défi du mercredi (G3)</td>
+                        <td class="groupe">Rappel et mini-défi du jeudi (G4)</td>
                     </tr>
 
                     <tr>
                         <th scope="row" class="heure">09:30–10:30</th>
                         <td class="cours">
-                            Découvrir Python et les notebooks Jupyter ;
-                            comprendre comment exécuter une cellule
+                            <strong>Python essentiel</strong><br>
+                            Variables, types, opérations, chaînes de caractères,
+                            listes et indexation
                         </td>
-                        <td class="cours">Listes, conditions et boucles</td>
-                        <td class="cours">Classes, objets, attributs et méthodes</td>
                         <td class="cours">
-                            Introduction au machine learning :
-                            données, cible, entraînement et test
+                            <strong>Programmer pour la science</strong><br>
+                            Conditions, boucles, dictionnaires et compréhensions de listes
                         </td>
-                        <td class="cours">Introduction à la classification</td>
+                        <td class="cours">
+                            <strong>NumPy</strong><br>
+                            Tableaux, dimensions, indexation, masques,
+                            vectorisation et statistiques par axe
+                        </td>
+                        <td class="cours">
+                            <strong>Fondamentaux du machine learning</strong><br>
+                            Variables explicatives, cible, séparation entraînement/test,
+                            prétraitement et modèle de référence
+                        </td>
+                        <td class="cours">
+                            <strong>Classification</strong><br>
+                            Régression logistique, arbres de décision,
+                            probabilités et seuil de décision
+                        </td>
                     </tr>
 
                     <tr>
                         <th scope="row" class="heure">10:30–11:30</th>
-                        <td class="application">Exercice d’application</td>
-                        <td class="application">Exercice d’application</td>
-                        <td class="application">Exercice d’application</td>
-                        <td class="application">Exercice d’application</td>
                         <td class="application">
-                            Entraîner et évaluer un modèle de classification
-                            avec scikit-learn
+                            Exercices guidés : manipuler des mesures scientifiques avec Python
+                        </td>
+                        <td class="application">
+                            Exercices : automatiser une analyse et écrire
+                            des fonctions réutilisables
+                        </td>
+                        <td class="application">
+                            Exercices NumPy : sélectionner, transformer et résumer
+                            des tableaux scientifiques
+                        </td>
+                        <td class="application">
+                            Construire une chaîne de traitement avec scikit-learn :
+                            séparation des données, prétraitement et modèle de référence
+                        </td>
+                        <td class="application">
+                            <strong>Évaluer un classifieur</strong><br>
+                            Matrice de confusion, précision, rappel, F1 et ROC-AUC ;
+                            comparaison de modèles
                         </td>
                     </tr>
 
@@ -204,13 +231,13 @@
                         <td class="pause">Pause déjeuner</td>
                         <td class="divers">
                             <strong>
-                                Atelier CV, lettre de motivation
-                                et bourses à l’étranger
+                                Atelier CV, lettre de motivation et bourses à l’étranger
                             </strong>
                         </td>
                         <td class="pause">Pause déjeuner</td>
                         <td class="divers">
-                            <strong>Conférence World Space Week</strong>
+                            <strong>Séminaire public</strong><br>
+                            Sciences spatiales, données et intelligence artificielle
                         </td>
                         <td class="pause">Pause déjeuner</td>
                     </tr>
@@ -218,42 +245,84 @@
                     <tr>
                         <th scope="row" class="heure">13:30–14:30</th>
                         <td class="cours">
-                            Variables, nombres et chaînes de caractères
+                            <strong>Logique et fonctions</strong><br>
+                            Premiers pas avec <code>if</code> et <code>for</code> ;
+                            fonctions, paramètres et <code>return</code>
                         </td>
                         <td class="cours">
-                            Fonctions : paramètres, valeurs retournées et appels
+                            <strong>Travailler avec des données réelles</strong><br>
+                            Lecture de fichiers CSV, valeurs manquantes,
+                            débogage et gestion des erreurs
                         </td>
                         <td class="cours">
-                            Introduction à NumPy, pandas et Matplotlib
+                            <strong>pandas</strong><br>
+                            DataFrame, filtrage, tri, agrégation,
+                            dates et valeurs manquantes
                         </td>
                         <td class="cours">
-                            Entraîner et évaluer un modèle de régression
-                            avec scikit-learn
+                            <strong>Régression</strong><br>
+                            Régression linéaire et forêt aléatoire ;
+                            entraînement et prédictions avec scikit-learn
                         </td>
-                        <td class="groupe">Travail en groupe</td>
+                        <td class="cours">
+                            <strong>Améliorer et interpréter un modèle</strong><br>
+                            Surapprentissage, validation croisée,
+                            pipelines et importance des variables
+                        </td>
                     </tr>
 
                     <tr>
                         <th scope="row" class="heure">14:30–15:30</th>
-                        <td class="application">Exercice d’application</td>
-                        <td class="application">Exercice d’application</td>
-                        <td class="application">Exercice d’application</td>
-                        <td class="application">Exercice d’application</td>
-                        <td class="groupe">Présentations des groupes</td>
+                        <td class="application">
+                            Exercices intégrateurs :
+                            calculs, conditions, boucles et fonctions
+                        </td>
+                        <td class="application">
+                            Exercices : lire, vérifier et préparer
+                            un jeu de données scientifique
+                        </td>
+                        <td class="application">
+                            <strong>Visualisation et analyse exploratoire</strong><br>
+                            Matplotlib : distributions, relations entre variables,
+                            corrélations et valeurs aberrantes
+                        </td>
+                        <td class="application">
+                            <strong>Évaluer une régression</strong><br>
+                            MAE, RMSE, R², résidus et comparaison au modèle de référence
+                        </td>
+                        <td class="groupe">
+                            <strong>Projet — Finalisation</strong><br>
+                            Comparer les résultats, discuter les limites
+                            et préparer la présentation
+                        </td>
                     </tr>
 
                     <tr>
                         <th scope="row" class="heure">15:30–17:00</th>
-                        <td class="groupe">Travail en groupe</td>
-                        <td class="groupe">Travail en groupe</td>
-                        <td class="groupe">Travail en groupe</td>
-                        <td class="groupe">Travail en groupe</td>
+                        <td class="groupe">
+                            <strong>Projet — Découverte</strong><br>
+                            Comprendre le jeu de données
+                            et formuler des questions scientifiques
+                        </td>
+                        <td class="groupe">
+                            <strong>Projet — Préparation</strong><br>
+                            Nettoyer les données et documenter les choix
+                        </td>
+                        <td class="groupe">
+                            <strong>Projet — Exploration</strong><br>
+                            Produire des figures et interpréter
+                            les relations entre variables
+                        </td>
+                        <td class="groupe">
+                            <strong>Projet — Modélisation</strong><br>
+                            Construire et évaluer des modèles de régression
+                        </td>
                         <td class="divers">
-                            <strong>Remise des certificats et goûter</strong>
+                            <strong>Présentation des projets et discussion</strong><br>
+                            Remise des certificats, clôture et goûter
                         </td>
                     </tr>
-                </tbody>
-            </table>
+                </tbody>            </table>
         </div>
 
         <ul class="programme-legende" aria-label="Légende">
